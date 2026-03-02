@@ -1,0 +1,5 @@
+You are given a syllogism in natural language, consisting of {{ num_premises }} premises and a conclusion. You task is to convert premises and conclusion of the syllogism to first-order logic. For logical operators, use LaTeX symbols: \\forall, \\exists, \\land, \\lor, \\neg, \\rightarrow. Make sure to use consistent mapping from natural language to FOL predicates. If possible, parse each proposition to a formula consisting of two atomic formulas, each of them a unary predicate. Each unique predicate should be represented by a lowercase (or camel-case) word. Do not focus on validity of the syllogism, only parse it to FOL. Generate the output with natural language propositions and first-order logic formulas in the JSON format: [{"proposition": "...", "fol_formula": "..."}, ...]
+
+Syllogism:
+
+{{ syllogism }}

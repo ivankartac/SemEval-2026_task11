@@ -1,0 +1,16 @@
+You are a translation quality evaluator. Your task is to verify if the following translation of a syllogism is correct.
+
+Original text:
+{{ formatted_original }}
+
+Translation:
+{{ translation }}
+
+Determine whether the translation preserves the meaning of each proposition, and whether there any mistranslations or omissions.
+
+Provide your verdict as a JSON object with exactly these fields:
+- "feedback": explanation of errors if incorrect, or confirmation that translation is correct
+- "correct": true if the translation is acceptable, false otherwise
+
+Your response MUST end with the JSON object on its own line, formatted as:
+{"feedback": "<your feedback>", "correct": <true or false>}

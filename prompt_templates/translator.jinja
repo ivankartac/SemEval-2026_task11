@@ -1,0 +1,11 @@
+Translate the following syllogism to English. Translated syllogism will be used as an input to a semantic parser. Make sure that your translation is unambiguous and easy to parse and understand. Some propositions may be nonsensical, but you should still preserve their meaning. Output ONLY the translation, nothing else.
+
+Text to translate:
+{{ formatted_text }}
+{% if feedback %}
+A previous translation attempt was incorrect. Here is the feedback:
+{{ feedback }}
+
+Please provide a corrected translation.
+{% endif %}
+English translation:

@@ -1,0 +1,33 @@
+model: qwen3:4b-thinking-2507-fp16
+output: results/output.jsonl
+
+ollama_url:
+  - http://localhost:11434
+
+
+# Translation: set model name to enable, null to disable
+translation_model: null
+
+# FOL parser syntax: "latex" (transpiled to Prover9) or "prover9" (used directly)
+parser_syntax: latex
+
+# Prover: "symbolic" (Prover9) or "llm"
+prover: symbolic
+
+# Premise retrieval: "symbolic", "llm", or null (disabled)
+premise_retrieval: null
+
+# Single-step: parse all propositions in one LLM call
+single_step: false
+
+# Pipeline mode
+end_to_end: false
+
+# Context window & output limits
+num_ctx: 16384
+num_predict: 16384
+translator_num_ctx: 4096
+
+# Execution
+batch_size: 1
+timeout: 300

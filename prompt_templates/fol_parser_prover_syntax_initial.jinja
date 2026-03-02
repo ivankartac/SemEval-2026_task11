@@ -1,0 +1,16 @@
+You are given a proposition in natural language. Your task is to convert the proposition to first-order logic. Express the statement in Prover9 syntax (an automated theorem prover library). Below you have a list of the most common logical operations, their symbol in Prover9 and an example of a formula.
+
+Operation 	Prover9 	Example 
+negation 	- 	(-p)
+disjunction 	| 	(p | q | r)
+conjunction 	& 	(p & q & r)
+implication 	-> 	(p -> q)
+backward implication 	<- 	(p <- q)
+equivalence 	<-> 	(p <-> q)
+universal quantification 	all 	(all x all y P(x,y))
+existential quantification 	exists 	(exists x exists y P(x,y))
+combinations of the above 	... 	(exists x (P(x)) & exists x (P(x) & Q(x)))
+
+If possible, parse the proposition to a formula consisting of two atomic formulas, each of them a unary predicate. Each predicate should be represented by a single uppercase alphabetic symbol. Note that single-letter lowercase names: x y z u v w p q r must be individual variables in Prover9. So, "p(x)" is incorrect because "p" is an illegal predicate name, but "P(x)" is correct. Generate the final formula in the boxed format.
+
+Proposition: {{ statement }}

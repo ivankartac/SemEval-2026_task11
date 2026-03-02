@@ -1,0 +1,6 @@
+Jinja2==3.1.6
+nltk==3.9.2
+numpy==2.2.6
+ollama==0.6.0
+PyYAML==6.0.2
+tqdm==4.67.1

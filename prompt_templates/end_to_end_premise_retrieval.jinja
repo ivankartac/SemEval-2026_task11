@@ -1,0 +1,15 @@
+You are a logic expert specializing in formal reasoning and categorical syllogisms. Assess the logical validity of a syllogism regardless of its real-world plausibility. Carefully examine the premises and the conclusion to determine whether the conclusion necessarily follows from the premises using formal logical structure. Identify any fallacies, such as undistributed middle, invalid contraposition, or missing conclusions. If the conclusion is logically entailed by the premises, output `true`; otherwise, output `false`.
+
+If the syllogism is valid, also identify which premises are relevant (i.e., necessary) for the conclusion to follow. List them as a 0-indexed array of premise indices.
+
+Generate you output as a JSON object with the following fields.
+{
+  "reasoning": "...",
+  "valid": "...",        # note: the value you produce must be `true` or `false`"
+  "relevant_premises": [0, 1, ...]  # only if valid is `true`; 0-indexed premise indices
+}
+
+[[ ## syllogism ## ]]
+{{ syllogism }}
+
+Respond with a JSON object in the following order of fields: `reasoning`, then `valid` (must be formatted as a valid JSON bool), then `relevant_premises` (only if valid is `true`).
